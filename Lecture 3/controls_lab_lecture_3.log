@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 FEB 2017 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  9 FEB 2017 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -324,29 +324,23 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 33.
-Package marginnote Info: Margin note 1.1 is on absolute page 1
-(marginnote)              on input line 53.
-Package marginnote Info: right page because not two side mode on input line 53.
-
-Package marginnote Info: xpos seems to be 312.53038pt,
-(marginnote)             \marginnoterightadjust ignored on input line 53.
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (3.72914pt too wide) in paragraph at lines 74--75
+Overfull \hbox (3.72914pt too wide) in paragraph at lines 75--76
 []\OT1/cmr/m/n/10.95 REMEMBER: THE CO-EF-FI-CIENTS ARE NOT EQUIV-I-LENT UN-TIL 
 YOU TAKE
  []
 
 [2] (./controls_lab_lecture_3.aux) ) 
 Here is how much of TeX's memory you used:
- 3589 strings out of 493014
- 50888 string characters out of 6133351
- 124347 words of memory out of 5000000
- 7058 multiletter control sequences out of 15000+600000
- 15988 words of font info for 59 fonts, out of 8000000 for 9000
+ 3604 strings out of 493014
+ 51032 string characters out of 6133351
+ 124330 words of memory out of 5000000
+ 7066 multiletter control sequences out of 15000+600000
+ 18454 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,11n,26p,332b,223s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,26p,332b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
@@ -356,17 +350,20 @@ e1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 ublic/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
 lic/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
-onts/latxfont/line10.pfb>
-Output written on controls_lab_lecture_3.pdf (2 pages, 144986 bytes).
+/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
+ts/latxfont/line10.pfb>
+Output written on controls_lab_lecture_3.pdf (2 pages, 171644 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
