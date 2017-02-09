@@ -1,15 +1,12 @@
 \documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
 \usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
 \usepackage{cancel}
+\usepackage{mathtools}
 \geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
-%\topmargin = -125pt
-%\textheight = 1000pt
-%\footskip = 100pt
-
 \usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
 								% TeX will automatically convert eps --> pdf in pdflatex		
 \usepackage{amssymb}
-\usepackage{bm}
+\usepackage{bm}                                       % The 2 Following Liens Allows Matrix Notation
 \newcommand{\matrva}[1]{\bm{#1}} 
 
 \title{\vspace{-3.0cm}Lab 3 - Continue Modeling MotorLab System}
@@ -29,6 +26,7 @@
 
 %% Third Section %%
 \section{MotorLab Coefficients}
+
 \subsection{Coefficients Needed to be Found}
 \begin{itemize}
 \item \(\zeta\)    ('zeta' or 'damping ratio')
@@ -43,27 +41,43 @@
 \[T(t) = k_t i(t) =  J \ddot \theta(t) \ + b \dot \theta(t) + k_s \theta(t) \]
 \[T(t) = k_t i(t) =  J \cancelto{0}{\ddot \theta(t)}  + b \cancelto{0}{\dot \theta(t)} + k_s \theta(t) \]
 \[k_t i(t) = k_s \theta(t) \] \label{eu_eqn}
-\[k_s = k_i \frac{i(t)}{\theta(t)} \]
+\[k_s = k_t \frac{i(t)}{\theta(t)}  = \frac{T(t)}{\theta(t)}\] 
+\item This means we can find \(k_s\) from the slope of \(T(t)\) and \(\theta(t)\)
 
-\item We will find theta by commanding current to the motor and then measuring the position of the motor shaft
+\item We will find theta by commanding current to the motor and then measuring the position of the motor shaft (Demonstrated in Lab)
 \item To estimate \(k_s\), the data should come out to be linear, so all you have to do is estimate the slope to find \(k_s\)
 \subitem You can play around with \(k_s\) manually to estimate slope
 \subitem You can export data to excel and use linear regression
 \subitem You can use the 'Normal Equation'
-\[k_s = (\matrva{\theta^T \theta})^{-1} \matrva{\theta i}    \]
+\[k_s = (\matrva{\theta^T \theta})^{-1} \matrva{\theta T}    \]
 \end{itemize}
 
 \subsection{How to Find \(\zeta\) - Logarithmic Decrement}
 \begin{itemize}
 \item Log. Decrement is used for finding the damping ratio of an underdamped system
-\item Defined as the natural log of the ratio of amplitude of two peaks, n periods apart, namely \(ln(P_i/P_(i+n))\)
+\item Defined as the natural log of the ratio of amplitude of two peaks, n periods apart, namely \(ln(P_i/P_{i+n})\)
 \item Will us this ratio to estimate the damping ratio
-\item You will need to find three points using data cursors (How to do this will be covered)
+\item You will need to find three points using data cursors in MATLAB (How to do this will be covered)
 \end{itemize}
 
 \subsection{Finding \(w_n\), \(T_{osc}\), \(w_d\), b}
 \begin{itemize}
-\item 
+\item We can find rest of the coefficients of the MotorLab by equating a standard \(2^{nd}\) order system with our model
 
+\[ G(s) = 
+\underbrace{\frac{k_t}{Js^2 + bs + k_s}}_\text{Motorlab Model} = 
+\underbrace{\frac{k_{dc}w_n^2 }{s^2 + 2\zeta w_n s + w_n^2}}_\text{Standard \(2^{nd}\) Order System}  \]
+
+\item Equate the coefficients of the two equations to solve for \(w_n\), b, etc.
+\item REMEMBER: THE COEFFICIENTS ARE NOT EQUIVILENT UNTIL YOU TAKE CARE OF J IN FRONT OF \(s^2\) IN THE MOTORLAB MODEL! 
+
+\end{itemize}
+
+\section{Final Thoughts}
+\begin{itemize}
+\item Make sure you've read the entire lab. It has information that will help you finish this lab and fill out the code
+\item We are looking for numeric answers for the coefficients table, not equations
+\item Have the instructors sign off the questions before you leave
+\end{itemize}
 
 \end{document}  
