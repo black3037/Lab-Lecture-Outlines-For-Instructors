@@ -1,0 +1,69 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\usepackage{cancel}
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\topmargin = -125pt
+%\textheight = 1000pt
+%\footskip = 100pt
+
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{bm}
+\newcommand{\matrva}[1]{\bm{#1}} 
+
+\title{\vspace{-3.0cm}Lab 3 - Continue Modeling MotorLab System}
+\author{Derek Black}
+\date{\vspace{-5ex}}
+
+\begin{document}
+\maketitle
+
+%% Introduction Section %%
+\section{Introduction}
+
+%% Second Section %%
+\section{Dynamic Model with Spring Added}
+
+\[T = J \ddot \theta(t) \ + b \dot \theta(t) + k_s \theta(t) \]
+
+%% Third Section %%
+\section{MotorLab Coefficients}
+\subsection{Coefficients Needed to be Found}
+\begin{itemize}
+\item \(\zeta\)    ('zeta' or 'damping ratio')
+\item \(w_n\)     ('natural frequency')
+\item \(k_s\)      ('spring constant')
+\end{itemize}
+
+\subsection{How to Find \(k_s\)}
+\begin{itemize}
+\item Like Lab 2, we will be looking at steady state
+\item Unlike Lab 2, we have a spring attached. This means we have a constant position opposed to constant velocity like Lab 2 when we apply amperage to the motor
+\[T(t) = k_t i(t) =  J \ddot \theta(t) \ + b \dot \theta(t) + k_s \theta(t) \]
+\[T(t) = k_t i(t) =  J \cancelto{0}{\ddot \theta(t)}  + b \cancelto{0}{\dot \theta(t)} + k_s \theta(t) \]
+\[k_t i(t) = k_s \theta(t) \] \label{eu_eqn}
+\[k_s = k_i \frac{i(t)}{\theta(t)} \]
+
+\item We will find theta by commanding current to the motor and then measuring the position of the motor shaft
+\item To estimate \(k_s\), the data should come out to be linear, so all you have to do is estimate the slope to find \(k_s\)
+\subitem You can play around with \(k_s\) manually to estimate slope
+\subitem You can export data to excel and use linear regression
+\subitem You can use the 'Normal Equation'
+\[k_s = (\matrva{\theta^T \theta})^{-1} \matrva{\theta i}    \]
+\end{itemize}
+
+\subsection{How to Find \(\zeta\) - Logarithmic Decrement}
+\begin{itemize}
+\item Log. Decrement is used for finding the damping ratio of an underdamped system
+\item Defined as the natural log of the ratio of amplitude of two peaks, n periods apart, namely \(ln(P_i/P_(i+n))\)
+\item Will us this ratio to estimate the damping ratio
+\item You will need to find three points using data cursors (How to do this will be covered)
+\end{itemize}
+
+\subsection{Finding \(w_n\), \(T_{osc}\), \(w_d\), b}
+\begin{itemize}
+\item 
+
+
+\end{document}  
